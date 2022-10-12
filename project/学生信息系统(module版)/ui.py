@@ -31,8 +31,21 @@ class StudentManagerView:
             self.__output_by_score(self.__manager.stu_list)
 
     def __input_student(self):
+        # while True:
+        #     try:
+        #         name = input("请输入姓名：")
+        #         break
+        #     except ValueError:
+        #         print("请正确输入姓名")
+        #         continue
         name = input("请输入姓名：")
-        age = int(input("请输入年龄："))
+        while True:
+            try:
+                age = int(input("请输入年龄:"))
+                break
+            except ValueError:
+                print("请正确输入年龄")
+                continue
         score = int(input("请输入成绩："))
         stu = model.StudentModel(name,age,score)
         self.__manager.add_student(stu)

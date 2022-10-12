@@ -1,6 +1,10 @@
 class StudentModel:
     def __init__(self,name = "",age = 0,score = 0,id = 0):
         self.id = id
+        # if type(name) == str:
+        #     self.name = name
+        # else:
+        #     raise ValueError()
         self.name = name
         self.age = age 
         self.score = score
@@ -36,3 +40,5 @@ class StudentModel:
     @score.setter
     def score(self,value):
         self.__score = value
+
+    print(type(name))
