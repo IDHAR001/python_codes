@@ -56,8 +56,10 @@ class LinkList:
         node = Node(value)
         node.next = p.next
         p.next = node
-        
-
+       
+    # 删除节点 
+    def delete(self, index):
+        pass
 
 
 
