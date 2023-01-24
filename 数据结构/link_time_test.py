@@ -25,3 +25,6 @@ print("time: ", time.time() - tm)
 
 list.insert(0,3)
 list.show_value()
+list.delete(3)
+list.show_value()
+list.delete(100)

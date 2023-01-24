@@ -58,8 +58,14 @@ class LinkList:
         p.next = node
        
     # 删除节点 
-    def delete(self, index):
-        pass
+    def delete(self, value):
+        p = self.head
+        while p.next and p.next.value != value:
+            p = p.next
+        if p.next is None:
+            raise ValueError("x not in list")
+        else:
+            p.next = p.next.next 
 
 
 
