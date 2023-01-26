@@ -67,6 +67,16 @@ class LinkList:
         else:
             p.next = p.next.next 
 
+    # 获取某个节点的值
+    def get_index(self, index):
+        p = self.head.next
+        i = 0
+        while True:
+            if i != index:
+                p = p.next
+                i += 1
+            else:
+                return p.value
 
 
 
