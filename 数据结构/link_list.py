@@ -1,4 +1,4 @@
-class Node():
+class Node:
     def __init__(self,value,next=None):
         self.value = value
         self.next = next
@@ -9,8 +9,8 @@ class LinkList:
 
     def init_list(self,list_):
         p = self.head
-        for i in list_:
-            p.next = Node(list_[i-1])
+        for item in list_:
+            p.next = Node(item)
             p = p.next
     
     # 遍历链表
@@ -60,6 +60,19 @@ class LinkList:
     # 删除节点 
     def delete(self, index):
         pass
+    
+    def merge(self, list):
+        p = self.head
+        q = list.head.next
+        while p.next is not None:
+            if q.next.value < q.value:
+                p = p.next
+            else:
+                tmp = p.next
+                p.next = q
+                p = p.next
+                q = tmp
+        p.next = q  
 
 
 
