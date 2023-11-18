@@ -1,3 +1,8 @@
 {
-    "python.analysis.typeCheckingMode": "off"
+    "python.analysis.typeCheckingMode": "off",
+    // "python.linting.pylintEnabled": true,
+    // "python.linting.enabled": true,
+    "python.defaultInterpreterPath": "/Users/zhangzhicong/anaconda3/bin/python",
+    "python.analysis.enablePytestSupport": false,
+    "python.terminal.activateEnvironment": false
 }
